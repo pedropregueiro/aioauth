@@ -45,6 +45,7 @@ class Post:
     client_secret: Optional[str] = None
     redirect_uri: Optional[str] = None
     scope: str = ""
+    state: Optional[str] = ""
     username: Optional[str] = None
     password: Optional[str] = None
     refresh_token: Optional[str] = None
