@@ -51,6 +51,7 @@ class RequestMethod(str, Enum):
 
     GET = "GET"
     POST = "POST"
+    PUT = "PUT"
 
 
 class CodeChallengeMethod(str, Enum):

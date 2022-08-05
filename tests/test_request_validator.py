@@ -21,7 +21,6 @@ from aioauth.utils import (
     encode_auth_headers,
     generate_token,
 )
-
 from .models import Defaults
 
 
@@ -39,7 +38,7 @@ async def test_insecure_transport_error(server: AuthorizationServer):
 async def test_allowed_methods(server: AuthorizationServer):
     request_url = "https://localhost"
 
-    request = Request(url=request_url, method=RequestMethod.POST)
+    request = Request(url=request_url, method=RequestMethod.PUT)
 
     response = await server.create_authorization_response(request)
     assert response.status_code == HTTPStatus.METHOD_NOT_ALLOWED
